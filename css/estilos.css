@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Incluir Font Awesome para los iconos */
+
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 body {
@@ -12,83 +12,77 @@ body {
     background-color: #000000;
 }
 
-
 /*---------------------------SECCION 1 LOGIN---------------------------*/
-/* Barra de navegación existente */
 .navlogin {
     background-color: #000000;
     color: #AFAFAF;
-    width: 100%; /* Ocupa todo el ancho */
-    padding: 3px 0; /* Espaciado vertical */
-    display: flex; /* Usamos flexbox para la barra de navegación */
-    justify-content: center; /* Centra todo el contenido dentro de la barra */
-}
-
-.navlogin .contenedor {   
-    max-width: 1200px; /* Ancho máximo */
-    width: 90%; /* Ancho relativo */
-    margin: 0 auto; /* Centra el contenido */
+    width: 100%;
+    padding: 3px 0;
     display: flex;
-    justify-content: space-between; /* Espacio entre logo y enlaces */
-    align-items: center; /* Alineación vertical de los elementos */
+    justify-content: center;
 }
 
-/* Estilos para los enlaces de Login y Regístrate */
+.navlogin .contenedor {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navlogin .links {
-    display: flex; /* Alinea los enlaces horizontalmente */
+    display: flex;
 }
 
 .navlogin .links a {
-    text-decoration: none; /* Elimina subrayados */
-    color: #e4e0e0; /* Color del texto */
-    font-size: 14px; /* Mantiene el tamaño actual */
-    margin-right: 15px; /* Espaciado entre enlaces */
-    font-family: 'Oswald', sans-serif; /* Fuente moderna */
-    display: flex; /* Alinea texto e íconos horizontalmente */
-    align-items: center; /* Alinea el ícono con el texto verticalmente */
-    gap: 8px; /* Espacio entre icono y texto */
+    text-decoration: none;
+    color: #e4e0e0;
+    font-size: 14px;
+    margin-right: 15px;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .navlogin .links a:hover {
-    color: #f700ff; /* Color del texto al pasar el cursor */
+    color: #f700ff;
 }
 
 .navlogin .links a .icono {
-    color: deeppink; /* Color del icono */
-    transition: transform 0.3s ease; /* Suaviza la transformación */
+    color: deeppink;
+    transition: transform 0.3s ease;
 }
 
 .navlogin .links a:hover .icono {
-    transform: scale(1.1); /* Agranda el ícono al pasar el cursor */
+    transform: scale(1.1);
 }
 
 .navlogin .links a:last-child {
-    margin-right: 0; /* Evita margen innecesario en el último enlace */
+    margin-right: 0;
 }
 
-/* Estilos específicos para el ícono del usuario y nombre */
 .usuario-conectado {
-    display: flex; /* Alinea ícono y nombre horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    gap: 10px; /* Espacio entre ícono y texto */
-    color: rgb(122, 122, 122); /* Color del ícono */
-    font-family: 'Oswald', sans-serif; /* Fuente moderna */
-    font-size: 14px; /* Tamaño de fuente */
-    cursor: pointer; /* Aparece como enlace */
-    transition: color 0.3s ease; /* Suaviza el cambio de color */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(122, 122, 122);
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
-
 
 .usuario-conectado .icono-usuario {
-    font-size: 18px; /* Tamaño del ícono */
-    color: rgb(122, 122, 122); /* Color del ícono */
-    transition: transform 0.3s ease, color 0.3s ease; /* Animación para escala y color */
+    font-size: 18px;
+    color: rgb(122, 122, 122);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-
 .usuario-conectado .nombre-usuario {
-    font-weight: bold; /* Resalta el nombre */
-    text-transform: capitalize; /* Convierte la primera letra en mayúscula */
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 
@@ -96,51 +90,49 @@ body {
 /*---------------------------SECCION 2 INPUT DE BUSQUEDA---------------------------*/
 
 .busqueda .contenedor2 {
-    max-width: 1200px; /* Ancho máximo */
-    width: 90%; /* Ancho relativo */
-    margin: 0 auto; /* Centra el contenido */
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Espacio entre logo y enlaces */
-    align-items: center; /* Alineación vertical */
+    justify-content: space-between;
+    align-items: center;
 }
 
 .busqueda {
-    background-color: #141416; /* Fondo negro */
-    color: rgb(255, 0, 162); /* Color del texto */
-    width: 100%; /* Ocupa todo el ancho */
-    padding: 20px 0; /* Espaciado vertical */
-    display: flex; /* Usamos flexbox */
-    flex-direction: row; /* Alineamos los elementos en una fila */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    gap: 10px; /* Espaciado entre los elementos */
+    background-color: #141416;
+    color: rgb(255, 0, 162);
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .busqueda form {
-    max-width: 1200px; /* Ancho máximo */
-    width: 90%; /* Ancho relativo */
-    display: flex; /* Para que los elementos estén alineados en fila */
-    justify-content: space-between; /* Espacio entre los elementos */
-    align-items: center; /* Alineación vertical de los elementos */
-    gap: 10px; /* Espacio entre los elementos */
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
-
 
 /*---------------------------INPUT DE BUSQUEDA---------------------------*/
 
 .busqueda input {
-    flex-grow: 0; /* Evita que el input se expanda más de lo necesario */
-    width: 100%; /* El input ocupará todo el ancho disponible */
-    max-width: 1200px; /* Evita que se expanda más allá de 600px en PC */
+    flex-grow: 0;
+    width: 100%;
+    max-width: 1200px;
     padding: 9px;
     border: none;
     border-radius: 4px;
     font-size: 14px;
-    margin-left: 23px; /* Ajusta esto para hacer la barra más pequeña desde la izquierda */
-    
-    background-color: #2e2d2d; /* Fondo suave */
-    color: #f700ff; /* Color del texto */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transición suave para hover */
+    margin-left: 23px;
+    background-color: #2e2d2d;
+    color: #f700ff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
     outline: none;
 }
 
@@ -149,54 +141,52 @@ body {
 
 .busqueda button {
     padding: 8px 20px;
-    background: linear-gradient(90deg, #ff007f, #5a189a); /* Degradado vibrante de rosa a morado */
-    color: #ffffff; /* El texto será blanco para resaltar */
+    background: linear-gradient(90deg, #ff007f, #5a189a);
+    color: #ffffff;
     font-size: 16px;
     font-weight: bold;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidad */
-    transition: all 0.3s ease-in-out; /* Transición suave */
-    position: relative; /* Posicionamiento relativo para efectos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: relative;
 }
 
-/* Efecto al pasar el cursor sobre el botón */
+/* Efecto hover */
 .busqueda button:hover {
-    background: linear-gradient(90deg, #ff007f, #ff61a6); /* Degradado con tonos más intensos en hover */
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
+    background: linear-gradient(90deg, #ff007f, #ff61a6);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Efecto de pulsación al hacer clic en el botón */
+/* Efecto de pulsación */
 .busqueda button:active {
-    transform: scale(0.98); /* Reduce el tamaño para simular un clic */
+    transform: scale(0.98);
 }
-
-
-/*--------------------------- LOGO ---------------------------*/
 
 /*--------------------------- LOGO ---------------------------*/
 
 .busqueda .contenedor2 .logo a {
-    text-decoration: none; /* Elimina el subrayado */
-    display: inline-block; /* Asegura que los estilos se apliquen correctamente */
+    text-decoration: none;
+    display: inline-block;
     margin: 0;
-    font-size: 20px; /* Tamaño ajustado */
-    color: transparent; /* Hace que el color del texto sea transparente */
-    background: linear-gradient(90deg, #ff0080, #9b1f9a); /* Degradado más saturado */
-    -webkit-background-clip: text; /* Aplica el degradado solo al texto */
-    -webkit-text-fill-color: transparent; /* Hace que solo el degradado sea visible */
-    font-weight: 700; /* Negrita para mayor impacto */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    letter-spacing: 2px; /* Espaciado entre letras */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Sombra más sutil */
-    padding: 5px 0; /* Espaciado interno reducido */
-    transition: transform 0.3s ease-in-out; /* Transición suave para el hover */
+    font-size: 20px;
+    color: transparent;
+    background: linear-gradient(90deg, #ff0080, #9b1f9a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    padding: 5px 0;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Efecto hover en el logo */
 .busqueda .contenedor2 .logo a:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    transform: scale(1.05);
 }
 
 
@@ -204,75 +194,75 @@ body {
 
 .contenedor3 {
     width: 100%;
-    background-color: #000000; /* Fondo claro para diferenciar la sección */
-    padding: 1px 0; /* Espaciado para separar */
+    background-color: #000000;
+    padding: 1px 0;
     display: flex;
-    justify-content: center; /* Centra el menú */
+    justify-content: center;
 }
 
 .menu {
-    background-color: #141416; /* Fondo negro */
-    color: rgb(255, 0, 162); /* Color del texto */
-    width: 100%; /* Ocupa todo el ancho */
-    padding: 10px 0; /* Espaciado vertical */
-    display: flex; /* Usamos flexbox */
-    flex-direction: row; /* Alineamos los elementos en una fila */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    gap: 10px; /* Espaciado entre los elementos */
+    background-color: #141416;
+    color: rgb(255, 0, 162);
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .menu ul {
-    list-style: none; /* Elimina los puntos de la lista */
-    margin: 0; /* Quita márgenes */
-    padding: 0; /* Quita rellenos */
-    display: flex; /* Hace que los items de la lista se alineen horizontalmente */
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
 }
 
 .menu ul li {
-    margin-right: 35px; /* Espaciado entre los items del menú */
+    margin-right: 35px; 
 }
 
 .menu ul li:last-child {
-    margin-right: 0; /* Elimina el margen del último item */
+    margin-right: 0;
 }
 
 .menu ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #ff0080; /* Color del texto */
-    font-size: 16px; /* Tamaño de la fuente */
-    font-family: 'Oswald', sans-serif; /* Fuente moderna */
-    display: flex; /* Hace que el texto y el icono estén alineados horizontalmente */
-    align-items: center; /* Alinea verticalmente */
-    gap: 8px; /* Espacio entre el ícono y el texto */
+    text-decoration: none;
+    color: #ff0080;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif; 
+    display: flex; 
+    align-items: center;
+    gap: 8px; 
 }
 
 .menu ul li a:hover {
-    color: #f700ff; /* Color cuando se pasa el cursor */
+    color: #f700ff; 
 }
 
-/* Efecto de iconos */
+
 .menu ul li a i {
-    font-size: 20px; /* Tamaño del icono */
+    font-size: 20px; 
     transition: transform 0.3s ease;
 }
 
 .menu ul li a:hover i {
-    transform: scale(1.1); /* Efecto de agrandar el icono al pasar el cursor */
+    transform: scale(1.1); 
 }
 
 
 /*-----------------------------------POST-----------------------------*/
 
 .contenedor4 {
-    max-width: 1200px; /* Permite que se adapte a cualquier pantalla */
-    width: calc(100% - 40px); /* Ancho relativo para mantener márgenes */
-    margin: auto; /* Centra el contenido */
+    max-width: 1200px; 
+    width: calc(100% - 40px); 
+    margin: auto; 
     padding: 20px 5px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Crea columnas automáticas con un tamaño mínimo de 300px */
-    gap: 20px; /* Espaciado entre los elementos */
-    justify-content: center; /* Centra los posts */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px; 
+    justify-content: center; 
     color: #ffffff;
 }
 
@@ -280,23 +270,23 @@ body {
     background: #0a0a0a;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
     padding: 20px;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    box-sizing: border-box; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribuye el contenido de forma equitativa */
-    min-height: 350px; /* Altura mínima para no deformar las cajas */
-    height: 100%; /* Permite que la caja se ajuste a su contenido pero no más */
-    overflow: hidden; /* Evita que el contenido se desborde */
+    justify-content: space-between;
+    min-height: 350px; 
+    height: 100%; 
+    overflow: hidden; 
 }
 
 .post article .titulo a {
     font-family: "Oswald", Arial, Sans-serif;
     font-size: 1.2rem;
     font-weight: normal;
-    line-height: 1.5; /* Espaciado compacto */
-    margin-bottom: 0; /* Reduce márgenes */
-    padding: 0; /* Asegúrate de no tener padding extra */
-    display: inline-block; /* Asegura que solo afecte al texto */
+    line-height: 1.5; 
+    margin-bottom: 0; 
+    padding: 0; 
+    display: inline-block;
     color: #ffffff;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -307,9 +297,9 @@ body {
 
 
 
-/* Efecto hover sin movimiento ni subrayado */
+
 .post article .titulo a:hover {
-    color: #BB1F35; /* Cambia el color al pasar el mouse */
+    color: #BB1F35; 
 }
 
 
@@ -332,7 +322,7 @@ body {
 
 .post article .extracto {
     font-size: 14px;
-    line-height: 1.2; /* Reduce el espacio entre líneas */
+    line-height: 1.2; 
     color: #ffffff;
     overflow: hidden;
 }
@@ -419,14 +409,14 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 1200px; /* Mantiene el ancho alineado con contenedor5 */
-    margin: 0 auto; /* Centrar el footer */
+    max-width: 1200px; 
+    margin: 0 auto; 
     padding: 20px;
 }
 
 .footer-section {
     flex: 1;
-    min-width: 250px; /* Mayor control sobre el tamaño mínimo */
+    min-width: 250px; 
     margin: 10px;
     text-align: left;
 }
@@ -482,73 +472,64 @@ footer {
 
 
 
-/* Estilos específicos para single.php */
 body.single-post .contenedor5 {
-    max-width: 1200px; /* Ajusta el ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar el contenido */
-}
-
-body.single-post .post video {
-    width: 100%; /* El video ocupará todo el ancho disponible */
-    height: auto; /* Mantendrá la proporción del video */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 body.single-post .post {
-    padding: 20px; /* Agrega algo de espacio interno */
+    padding: 20px;
+}
+
+body.single-post .post video {
+    width: 100%;
+    height: auto;
 }
 
 body.single-post .thumb {
-    margin-bottom: 20px; /* Separación entre el video y el texto */
+    margin-bottom: 20px;
 }
 
 body.single-post .extracto {
-    font-size: 1.2em; /* Ajusta el tamaño del texto descriptivo */
-    line-height: 1.6; /* Mejora la legibilidad */
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
-
-
-/* Contenedor Principal */
 .contenedor5 {
-    display: flex; /* Para alinear contenido principal y barra lateral */
-    max-width: 1200px; /* Ancho máximo total */
-    margin: 0 auto; /* Centrar el contenedor */
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
     color: #fff;
 }
 
-/* Contenido Principal */
 .contenido-principal {
-    flex: 3; /* Ocupa 3 partes del espacio */
+    flex: 3;
     padding: 15px;
 }
 
-/* Barra Lateral */
 .barra-lateral {
-    flex: 1; /* Ocupa 1 parte del espacio */
-    margin: 15px 0 120px 0px;
+    flex: 1;
+    margin: 15px 0 120px 0;
     padding: 20px;
-    background-color: #141416; /* Color de fondo para distinguirla */
+    background-color: #141416;
 }
 
-/* Estilos para videos pequeños */
 .barra-lateral ul {
-    list-style: none; /* Quita los puntos de lista */
+    list-style: none;
     padding: 0;
 }
 
 .barra-lateral li {
-    margin-bottom: 20px; /* Espaciado entre videos */
+    margin-bottom: 20px;
 }
 
 .barra-lateral video {
-    width: 100%; /* Video ocupa el ancho disponible */
+    width: 100%;
     height: auto;
 }
 
-/* Títulos de los videos pequeños */
 .barra-lateral p {
-    font-size: 0.9em; /* Tamaño reducido */
-    text-align: center; /* Centrado */
+    font-size: 0.9em;
+    text-align: center;
     margin-top: 5px;
 }
-
