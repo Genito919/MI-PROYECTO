@@ -1,0 +1,3 @@
+[submodule "UPLOAD"]
+	path = UPLOAD
+	url = https://github.com/Genito919/Upload.git
