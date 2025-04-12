@@ -4,3 +4,6 @@
 [submodule "login_registro"]
 	path = login_registro
 	url = https://github.com/Genito919/Login-Y-Registro.git
+[submodule "Reels"]
+	path = Reels
+	url = https://github.com/Genito919/Reels.git
