@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+.reels-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.reel {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+}
+
+.reel div {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+video {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+}
+
+/*========================== BOTÓN DE PLAY ===========================*/
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+    font-size: 24px;
+    opacity: 1;
+}
+.play-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/*========================== BOTÓN DE SONIDO =========================*/
+
+.sound-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+    font-size: 18px;
+}
+
+.sound-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+/*======================= BOTONES DE CONTROL ========================*/
+
+div .controls {
+    position: absolute;
+    flex-direction: column;
+    top: 180px;
+    right: 15px;
+    gap: 10px;
+}
+
+.btn {
+    background: transparent; 
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+/* ===== EFECTOS HOVER Y CLICK ===== */
+
+.btn:not(.user-btn):hover i {
+    font-weight: bold; 
+}
+
+.like.active i {
+    color: #0f0 !important; 
+    font-weight: 900; 
+}
+
+.dislike.active i {
+    color: #f00 !important;
+    font-weight: 900;
+}
+
+
+/*======================= BOTON DE LIKE ===========================*/
+
+.btn.like {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.like-count {
+    font-size: 12px; 
+    color: white;
+}
+
+/*=================== BOTON DE COMENTARIOS =======================*/
+
+.btn.comment {      
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap: 2px; 
+}
+
+.comment-count {
+    font-size: 12px; 
+    color: white;
+}
+
+/*============================LOGOTIPO===============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    height: 40px; 
+}
+
+.logo i {
+    font-size: 26px;
+    color: #ff0080; 
+    text-shadow: 0px 0px 8px rgba(255, 0, 128, 0.8); 
+    margin-right: 5px; 
+}
+
+.logo a {
+    font-family: 'Anton', sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+    color: transparent;
+    background: linear-gradient(90deg, #9b1f9a, #ff0080); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 10px rgba(155, 31, 154, 0.7); 
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    line-height: 40px; 
+}
+
+.logo a:hover {
+    transform: scale(1.08);
+    text-shadow: 0px 0px 15px rgba(255, 0, 128, 1); 
+}
+
+
+.progress-bar {
+    width: 90%;  
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px; 
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+
+/*========================= RESPONSIVE ===========================*/
+
+@media (max-width: 768px) {
+    div .controls {
+        top: 180px;
+        right: 15px; 
+        gap: 18px; 
+    }
+    .btn {
+        font-size: 24px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+}
+
+@media (max-width: 768px) {
+    video {
+        width: 100vw; 
+        height: 100vh; 
+        object-fit: cover; 
+    }
+}
