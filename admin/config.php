@@ -1,6 +1,7 @@
 <?php
 
-define('RUTA','http://192.168.10.10/curso_php/practica/MI_PROYECTO/'); 
+define('RUTA', '/PROYECTO/'); // Ruta base relativa simple
+
 $bd_config = array(
     'basedatos' => 'proyecto_bloger',
     'usuario' => 'root',
@@ -8,11 +9,11 @@ $bd_config = array(
 );
 
 $blog_config = array(
-    'post_por_pagina' => '9',
-    'carpeta_imagenes' => 'http://192.168.10.10/curso_php/practica/MI_PROYECTO/videos/' //para traer videos de mysql deves cambiar la ruta aqui y en la base de datos
+    'post_por_pagina' => '6',
+    'carpeta_imagenes' => 'videos/' // Ruta relativa al directorio del proyecto
 );
 
-$blog_admin = array( //PONER EL LOGIN CREADO
+$blog_admin = array(
     'usuario' => 'yo',
     'password' => '123'
 );

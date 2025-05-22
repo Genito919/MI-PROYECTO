@@ -1,8 +1,8 @@
 <?php 
 
-require 'admin/config.php';
+require '../admin/config.php';
 
-require 'Functions.php';
+require '../functions.php';
 
 $conexion = conexion($bd_config); 
 if(!$conexion) {

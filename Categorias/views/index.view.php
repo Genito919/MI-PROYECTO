@@ -1,5 +1,4 @@
-<?php require 'header.php'; ?>
-
+<?php require '../views/header.php'; ?>
 <!-- Sección 4 Contenido -->
 <div class="contenedor9">
     <?php 
@@ -36,7 +35,7 @@
                             <video 
                                 width="100%" 
                                 height="auto" 
-                                poster="http://localhost/curso_php/practica/MI_PROYECTO/miniaturas/<?php echo $video['miniatura']; ?>" 
+                                poster="../miniaturas/<?php echo $video['miniatura']; ?>" 
                                 muted>
                             </video>
                         </a>
@@ -51,8 +50,7 @@
         </div>
     <?php endforeach; ?>
 </div>
-
-<?php require 'paginacion.php'; ?>
+<?php require '../paginacion.php'; ?>
 <?php require 'views/footer.php'; ?>
 
 

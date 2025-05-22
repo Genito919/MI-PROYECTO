@@ -49,8 +49,38 @@ function obtener_post_por_id($conexion, $id){
     return ($resultado) ? $resultado->fetchAll() : false;
 }
 
-// FUNCIÓN PARA FORMATEAR LA FECHA (OPCIONAL)
+// FUNCIÓN PARA OBTENER TODOS LOS VIDEOS
+function obtener_todos_los_videos($conexion){
+    $consulta = $conexion->prepare("SELECT * FROM articulos ORDER BY fecha DESC");
+    $consulta->execute();
+    return $consulta->fetchAll(PDO::FETCH_ASSOC);
+}
+
+// FUNCIÓN PARA OBTENER COMENTARIOS POR ID DE ARTÍCULO
+function obtener_comentarios_por_post_id($conexion, $articulo_id) {
+    $statement = $conexion->prepare('SELECT usuario, comentario, fecha FROM comentarios WHERE articulo_id = :id ORDER BY fecha DESC');
+    $statement->execute([':id' => $articulo_id]);
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+// FUNCIÓN PARA AGREGAR UN COMENTARIO NUEVO
+function agregar_comentario($conexion, $articulo_id, $usuario, $comentario) {
+    $statement = $conexion->prepare('INSERT INTO comentarios (articulo_id, usuario, comentario) VALUES (:articulo_id, :usuario, :comentario)');
+    $result = $statement->execute([
+        ':articulo_id' => $articulo_id,
+        ':usuario' => $usuario,
+        ':comentario' => $comentario
+    ]);
+    if (!$result) {
+        $errorInfo = $statement->errorInfo();
+        echo "Error en la consulta: " . $errorInfo[2];
+    }
+    return $result;
+}
+
+
 /*
+// FUNCIÓN PARA FORMATEAR LA FECHA (OPCIONAL)
 function fecha($fecha) {
     $timestamp = strtotime($fecha);
     $meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
@@ -61,4 +91,6 @@ function fecha($fecha) {
 }
 */
 ?>
+
+
 

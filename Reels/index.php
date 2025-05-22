@@ -22,7 +22,7 @@ $result = $conn->query($sql);
 <body>
     <!--LOGOTIPO------------------------------------------------------------------->
     <p class="logo">
-        <a href="http://192.168.10.10/curso_php/PROYECTO%20TRAVELBLOGS/">
+        <a href="../index.php">
             <i class="ph ph-caret-left"></i>
             <span>TravelBlogs</span>
         </a>
@@ -34,7 +34,7 @@ $result = $conn->query($sql);
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="reel">
                         <div>
-                            <video src="http://192.168.10.10/curso_php/PROYECTO%20TRAVELBLOGS/Reels/VideoReels/' . $row["reel_url"] . '" loop muted playsinline></video>
+                            <video src="./videoreels/' . $row["reel_url"] . '" loop muted playsinline></video>
                             <button class="sound-btn"><i class="fa-solid fa-volume-xmark"></i></button>
                             <input type="range" class="progress-bar" min="0" max="100" value="0"> 
                         </div>

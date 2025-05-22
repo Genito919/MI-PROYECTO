@@ -353,50 +353,6 @@ body {
 }
 
 
-
-/*---------------------------------PAGINACION------------------------------*/
-.paginacion {
-	margin-bottom: 30px;
-}
-
-.paginacion ul {
-	list-style: none;
-	text-align: center;
-}
-
-.paginacion ul li {
-	display: inline-block;
-	margin:0 5px;
-	color:#ffffff;
-}
-
-.paginacion ul li a {
-	display: block;
-	padding:10px 20px;
-	background: #141416;
-	color:#ffffff;
-}
-
-.paginacion ul li a:hover {
-	background: #FF1493;
-	text-decoration: none;
-}
-
-.paginacion ul .active {
-	background: #FF1493;
-	padding:10px 20px;
-}
-
-.paginacion ul .disabled{
-	background: #a8a8a8;
-	padding:10px 20px;
-	cursor: not-allowed;
-}
-
-.paginacion ul .disabled:hover {
-	background: #a8a8a8;
-}
-
 /* ===================== PRIMER FOOTER ===================== */
 footer {
     background: #222222;

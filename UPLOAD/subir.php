@@ -1,4 +1,3 @@
-
 <?php 
 require 'funciones.php';
 
@@ -15,24 +14,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
 
     // Comprobamos si es una imagen
     if ($check_img !== false) {
-        // Directorio donde se guardarán las imágenes
-        $carpeta_destino_imagen = '../MI_PROYECTO/miniaturas/'; // RUTA DE IMAGEN
-        $archivo_subido_imagen = $carpeta_destino_imagen . $_FILES['foto']['name'];
+        // Directorio donde se guardarán las imágenes (miniaturas)
+        $carpeta_destino_imagen = dirname(__DIR__) . '/miniaturas/';
+        $archivo_subido_imagen = $carpeta_destino_imagen . basename($_FILES['foto']['name']);
         
-        // Mover archivo de imagen a la carpeta destino
-        move_uploaded_file($_FILES['foto']['tmp_name'], $archivo_subido_imagen);
-        $miniatura = $_FILES['foto']['name'];
+        if (move_uploaded_file($_FILES['foto']['tmp_name'], $archivo_subido_imagen)) {
+            $miniatura = $_FILES['foto']['name'];
+        } else {
+            $error = "Error al subir la imagen.";
+        }
     }
 
     // Comprobamos si es un video
     if ($check_video) {
         // Directorio donde se guardarán los videos
-        $carpeta_destino_video = '../MI_PROYECTO/videos/'; // RUTA DE VIDEO
-        $archivo_subido_video = $carpeta_destino_video . $_FILES['video']['name'];
+        $carpeta_destino_video = dirname(__DIR__) . '/videos/';
+        $archivo_subido_video = $carpeta_destino_video . basename($_FILES['video']['name']);
         
-        // Mover archivo de video a la carpeta destino
-        move_uploaded_file($_FILES['video']['tmp_name'], $archivo_subido_video);
-        $video = $_FILES['video']['name'];
+        if (move_uploaded_file($_FILES['video']['tmp_name'], $archivo_subido_video)) {
+            $video = $_FILES['video']['name'];
+        } else {
+            $error = "Error al subir el video.";
+        }
     }
 
     // Si tenemos imagen o video, insertar en la base de datos

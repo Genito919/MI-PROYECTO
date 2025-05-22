@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Incluir Font Awesome para los iconos */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 body {
@@ -14,201 +14,504 @@ body {
 
 
 /*---------------------------SECCION 1 LOGIN---------------------------*/
+/* Barra de navegación existente */
 .navlogin {
     background-color: #000000;
     color: #AFAFAF;
-    width: 100%;
-    padding: 3px 0;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 3px 0; /* Espaciado vertical */
+    display: flex; /* Usamos flexbox para la barra de navegación */
+    justify-content: center; /* Centra todo el contenido dentro de la barra */
 }
 
-.navlogin .contenedor {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
+.navlogin .contenedor {   
+    max-width: 1200px; /* Ancho máximo */
+    width: 90%; /* Ancho relativo */
+    margin: 0 auto; /* Centra el contenido */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Espacio entre logo y enlaces */
+    align-items: center; /* Alineación vertical de los elementos */
 }
 
+/* Estilos para los enlaces de Login y Regístrate */
 .navlogin .links {
-    display: flex;
+    display: flex; /* Alinea los enlaces horizontalmente */
 }
 
 .navlogin .links a {
-    text-decoration: none;
-    color: #e4e0e0;
-    font-size: 14px;
-    margin-right: 15px;
-    font-family: 'Oswald', sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    text-decoration: none; /* Elimina subrayados */
+    color: #e4e0e0; /* Color del texto */
+    font-size: 14px; /* Mantiene el tamaño actual */
+    margin-right: 15px; /* Espaciado entre enlaces */
+    font-family: 'Oswald', sans-serif; /* Fuente moderna */
+    display: flex; /* Alinea texto e íconos horizontalmente */
+    align-items: center; /* Alinea el ícono con el texto verticalmente */
+    gap: 8px; /* Espacio entre icono y texto */
 }
 
 .navlogin .links a:hover {
-    color: #f700ff;
+    color: #f700ff; /* Color del texto al pasar el cursor */
 }
 
 .navlogin .links a .icono {
-    color: deeppink;
-    transition: transform 0.3s ease;
+    color: deeppink; /* Color del icono */
+    transition: transform 0.3s ease; /* Suaviza la transformación */
 }
 
 .navlogin .links a:hover .icono {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Agranda el ícono al pasar el cursor */
 }
 
 .navlogin .links a:last-child {
-    margin-right: 0;
+    margin-right: 0; /* Evita margen innecesario en el último enlace */
 }
 
+/* Estilos específicos para el ícono del usuario y nombre */
 .usuario-conectado {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: rgb(122, 122, 122);
-    font-family: 'Oswald', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    display: flex; /* Alinea ícono y nombre horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 10px; /* Espacio entre ícono y texto */
+    color: rgb(122, 122, 122); /* Color del ícono */
+    font-family: 'Oswald', sans-serif; /* Fuente moderna */
+    font-size: 14px; /* Tamaño de fuente */
+    cursor: pointer; /* Aparece como enlace */
+    transition: color 0.3s ease; /* Suaviza el cambio de color */
 }
+
 
 .usuario-conectado .icono-usuario {
-    font-size: 18px;
-    color: rgb(122, 122, 122);
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 18px; /* Tamaño del ícono */
+    color: rgb(122, 122, 122); /* Color del ícono */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animación para escala y color */
 }
 
+
 .usuario-conectado .nombre-usuario {
-    font-weight: bold;
-    text-transform: capitalize;
+    font-weight: bold; /* Resalta el nombre */
+    text-transform: capitalize; /* Convierte la primera letra en mayúscula */
 }
+
+
+
+
+
+
+
 
 
 /*---------------------------SECCION 2 INPUT DE BUSQUEDA---------------------------*/
+
 .busqueda .contenedor2 {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
+    max-width: 1200px; /* Ancho máximo */
+    width: 90%; /* Ancho relativo */
+    margin: 0 auto; /* Centra el contenido */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Espacio entre logo y enlaces */
+    align-items: center; /* Alineación vertical */
 }
 
 .busqueda {
-    background-color: #141416;
-    color: rgb(255, 0, 162);
-    width: 100%;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    background-color: #141416; /* Fondo negro */
+    color: rgb(255, 0, 162); /* Color del texto */
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 20px 0; /* Espaciado vertical */
+    display: flex; /* Usamos flexbox */
+    flex-direction: row; /* Alineamos los elementos en una fila */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    gap: 10px; /* Espaciado entre los elementos */
 }
 
 .busqueda form {
-    max-width: 1200px;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+    max-width: 1200px; /* Ancho máximo */
+    width: 90%; /* Ancho relativo */
+    display: flex; /* Para que los elementos estén alineados en fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alineación vertical de los elementos */
+    gap: 10px; /* Espacio entre los elementos */
 }
 
 
 /*---------------------------INPUT DE BUSQUEDA---------------------------*/
+
 .busqueda input {
-    flex-grow: 0;
-    width: 100%;
-    max-width: 1200px;
+    flex-grow: 0; /* Evita que el input se expanda más de lo necesario */
+    width: 100%; /* El input ocupará todo el ancho disponible */
+    max-width: 1200px; /* Evita que se expanda más allá de 600px en PC */
     padding: 9px;
     border: none;
     border-radius: 4px;
     font-size: 14px;
-    margin-left: 23px;
-    background-color: #2e2d2d;
-    color: #f700ff;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-left: 23px; /* Ajusta esto para hacer la barra más pequeña desde la izquierda */
+    
+    background-color: #2e2d2d; /* Fondo suave */
+    color: #f700ff; /* Color del texto */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transición suave para hover */
     outline: none;
 }
 
 
 /*---------------------------BOTON DE BUSQUEDA---------------------------*/
+
 .busqueda button {
     padding: 8px 20px;
-    background: linear-gradient(90deg, #ff007f, #5a189a);
-    color: #ffffff;
+    background: linear-gradient(90deg, #ff007f, #5a189a); /* Degradado vibrante de rosa a morado */
+    color: #ffffff; /* El texto será blanco para resaltar */
     font-size: 16px;
     font-weight: bold;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidad */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+    position: relative; /* Posicionamiento relativo para efectos */
 }
 
+/* Efecto al pasar el cursor sobre el botón */
 .busqueda button:hover {
-    background: linear-gradient(90deg, #ff007f, #ff61a6);
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #ff007f, #ff61a6); /* Degradado con tonos más intensos en hover */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
 }
 
+/* Efecto de pulsación al hacer clic en el botón */
 .busqueda button:active {
-    transform: scale(0.98);
+    transform: scale(0.98); /* Reduce el tamaño para simular un clic */
 }
 
 
 /*--------------------------- LOGO ---------------------------*/
+
+/*--------------------------- LOGO ---------------------------*/
+
 .busqueda .contenedor2 .logo a {
-    text-decoration: none;
-    display: inline-block;
+    text-decoration: none; /* Elimina el subrayado */
+    display: inline-block; /* Asegura que los estilos se apliquen correctamente */
     margin: 0;
-    font-size: 20px;
-    color: transparent;
-    background: linear-gradient(90deg, #ff0080, #9b1f9a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-    padding: 5px 0;
-    transition: transform 0.3s ease-in-out;
+    font-size: 20px; /* Tamaño ajustado */
+    color: transparent; /* Hace que el color del texto sea transparente */
+    background: linear-gradient(90deg, #ff0080, #9b1f9a); /* Degradado más saturado */
+    -webkit-background-clip: text; /* Aplica el degradado solo al texto */
+    -webkit-text-fill-color: transparent; /* Hace que solo el degradado sea visible */
+    font-weight: 700; /* Negrita para mayor impacto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Sombra más sutil */
+    padding: 5px 0; /* Espaciado interno reducido */
+    transition: transform 0.3s ease-in-out; /* Transición suave para el hover */
 }
 
 .busqueda .contenedor2 .logo a:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
 }
 
 
 /*---------------------------SECCION 3 MENU*---------------------------*/
+
 .contenedor3 {
     width: 100%;
-    background-color: #000000;
-    padding: 1px 0;
+    background-color: #000000; /* Fondo claro para diferenciar la sección */
+    padding: 1px 0; /* Espaciado para separar */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra el menú */
 }
 
 .menu {
-    background-color: #141416;
-    color: rgb(255, 0, 162);
-    width: 100%;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    background-color: #141416; /* Fondo negro */
+    color: rgb(255, 0, 162); /* Color del texto */
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 10px 0; /* Espaciado vertical */
+    display: flex; /* Usamos flexbox */
+    flex-direction: row; /* Alineamos los elementos en una fila */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    gap: 10px; /* Espaciado entre los elementos */
 }
 
 .menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Quita márgenes */
+    padding: 0; /* Quita rellenos */
+    display: flex; /* Hace que los items de la lista se alineen horizontalmente */
+}
+
+.menu ul li {
+    margin-right: 35px; /* Espaciado entre los items del menú */
+}
+
+.menu ul li:last-child {
+    margin-right: 0; /* Elimina el margen del último item */
+}
+
+.menu ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #ff0080; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-family: 'Oswald', sans-serif; /* Fuente moderna */
+    display: flex; /* Hace que el texto y el icono estén alineados horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    gap: 8px; /* Espacio entre el ícono y el texto */
+}
+
+.menu ul li a:hover {
+    color: #f700ff; /* Color cuando se pasa el cursor */
+}
+
+/* Efecto de iconos */
+.menu ul li a i {
+    font-size: 20px; /* Tamaño del icono */
+    transition: transform 0.3s ease;
+}
+
+.menu ul li a:hover i {
+    transform: scale(1.1); /* Efecto de agrandar el icono al pasar el cursor */
+}
+
+
+/*-----------------------------------POST-----------------------------*/
+
+.contenedor4 {
+    max-width: 1200px; /* Permite que se adapte a cualquier pantalla */
+    width: calc(100% - 40px); /* Ancho relativo para mantener márgenes */
+    margin: auto; /* Centra el contenido */
+    padding: 20px 5px;
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos salten de línea en pantallas pequeñas */
+    gap: 20px; /* Espaciado entre los elementos */
+    justify-content: center; /* Centra los posts */
+    color: #ffffff;
+}
+
+.contenedor4 .post {
+    flex: 1 1 300px; /* Ocupa el 100% menos los márgenes en pantallas pequeñas */
+    background: #0a0a0a;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    margin: auto; /* Espaciado entre posts */
+    padding: 20px; /* Reduce el padding */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+/* Estilo para el video */
+.contenedor4 .post .thumb video {
+    width: 100%; /* El video ocupa el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+    max-width: 100%; /* Asegura que no se desborde */
+    display: block; /* Evita que el video tenga un espacio debajo */
+    margin: 0 auto; /* Centra el video dentro del contenedor */
+}
+
+
+/* Estilos del título sin enlace */
+.post article .titulo {
+    font-family: "Oswald", Arial, Sans-serif;
+    font-size: 1.5rem; /* Usa unidades relativas */
+    font-weight: normal;
+    line-height: 1.5; /* Relación proporcional */
+    margin-bottom: 10px;
+    color: #ffffff; /* Color del texto */
+}
+
+
+.post article .fecha {
+    color: #747474;
+    font-size: 0.875rem; /* Ajusta con unidades relativas */
+    margin-bottom: 10px;
+}
+
+.post article .thumb {
+    margin-bottom: 20px;
+}
+
+.post article .thumb img {
+    vertical-align: top;
+    width: 100%;
+    height: auto; /* Mantén la proporción de las imágenes */
+}
+
+.post article .extracto {
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.post article .continuar {
+	color:#ffffff;
+	font-weight: bold;
+}
+
+.btn {
+	padding: 15px;
+	display: inline-block;
+	margin: 15px 0;
+	background: #595959;
+	color:#fff;
+	font-size: 1em;
+	font-family: Arial, sans-serif, helvetica;
+	border-radius: 2px;
+	border:none;
+}
+
+.btn:hover {
+	text-decoration: none;
+	background: #BB1F35;
+}
+
+
+/*---------------------------------PAGINACION------------------------------*/
+.paginacion {
+	margin-bottom: 30px;
+}
+
+.paginacion ul {
+	list-style: none;
+	text-align: center;
+}
+
+.paginacion ul li {
+	display: inline-block;
+	margin:0 5px;
+	color:#ffffff;
+}
+
+.paginacion ul li a {
+	display: block;
+	padding:10px 20px;
+	background: #141416;
+	color:#ffffff;
+}
+
+.paginacion ul li a:hover {
+	background: #FF1493;
+	text-decoration: none;
+}
+
+.paginacion ul .active {
+	background: #FF1493;
+	padding:10px 20px;
+}
+
+.paginacion ul .disabled{
+	background: #a8a8a8;
+	padding:10px 20px;
+	cursor: not-allowed;
+}
+
+.paginacion ul .disabled:hover {
+	background: #a8a8a8;
+}
+
+/*-----------------FOOTER---------------*/
+
+footer {
+    background-color: #141416;
+    color: #ffffff;
+}
+
+footer .copyright {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px 0;
+    
+}
+
+footer .copyright p {
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+
+/*---------------------------CATEGORIAS---------------------------*/
+
+.contenedor9 {
+    max-width: 1200px; /* Permite que se adapte a cualquier pantalla */
+    width: calc(100% - 40px); /* Ancho relativo para mantener márgenes */
+    margin: auto; /* Centra el contenido */
+    padding: 20px 5px;
+    display: grid; /* Usamos grid en lugar de flex */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 20px; /* Espaciado entre los elementos */
+    justify-items: center; /* Centra los items dentro de las celdas */
+}
+
+/* Estilo para cada post */
+.contenedor9 .post {
+    background: #0a0a0a;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    margin: auto; /* Espaciado entre posts */
+    padding: 20px; /* Reduce el padding */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    height: 640px; /* Altura fija, ajusta según lo necesites */
+}
+
+/* Estilo para el video dentro del post */
+.contenedor9 .post .thumb video {
+    width: 100%; /* El video ocupa el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+    max-width: 100%; /* Asegura que no se desborde */
+    display: block; /* Evita que el video tenga un espacio debajo */
+    margin: 0 auto; /* Centra el video dentro del contenedor */
+}
+
+/*---------------------------RESPONSIVIDAD---------------------------*/
+
+/* Pantallas medianas (tabletas, pantallas pequeñas) */
+@media (max-width: 768px) {
+    .contenedor9 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas más pequeñas */
+    }
+}
+
+/* Pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+    .contenedor9 {
+        grid-template-columns: 1fr; /* 1 columna para teléfonos móviles */
+    }
+}
+
+    /* Estilo para el contenedor de cada post */
+    .contenedor9 .post {
+        flex: 1 1 300px; /* Ocupa el 100% menos los márgenes en pantallas pequeñas */
+        background: #0a0a0a;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+        margin: auto; /* Espaciado entre posts */
+        padding: 20px; /* Reduce el padding */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+        height: 640px; /* Altura fija, ajusta según lo necesites */
+    }
+
+    /* Estilo para el video dentro del post */
+    .contenedor9 .post .thumb video {
+        width: 100%; /* El video ocupa el 100% del ancho del contenedor */
+        height: auto; /* Mantiene la proporción del video */
+        max-width: 100%; /* Asegura que no se desborde */
+        display: block; /* Evita que el video tenga un espacio debajo */
+        margin: 0 auto; /* Centra el video dentro del contenedor */
+    }
+
+/* Estilo para el contenedor del botón "Ver más" */
+.contenedor9 .post .ver-mas {
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del espacio disponible */
+    margin-top: 30px; /* Espaciado entre el video y el botón */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+/* Estilo para el botón "Ver más" */
+.contenedor9 .post .btn-ver-mas {
+    display: block; /* Hace que el botón ocupe todo el ancho de su contenedor */
+    width: 100%; /* Asegura que el botón ocupe el 100% del contenedor */
+    background-color: #ff007f;
+    color: white;
+    text-decoration: none;
+    text-align: center; /* Centra el texto dentro del botón */
+    padding: 12px 0; /* Ajusta la altura del botón */
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+.contenedor9 .post .btn-ver-mas:hover {
+    background-color: #9a1b2b;
 }

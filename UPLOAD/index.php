@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
     if ($archivo_foto['error'] === UPLOAD_ERR_OK) {
         $check_imagen = @getimagesize($archivo_foto['tmp_name']);
         if ($check_imagen !== false) {
-            $carpeta_destino_imagen = '../MI_PROYECTO/miniaturas/';
+            $carpeta_destino_imagen = '../miniaturas/'; // RUTA DE IMAGEN---------------------------
             $archivo_imagen_subido = $carpeta_destino_imagen . $archivo_foto['name'];
             if (move_uploaded_file($archivo_foto['tmp_name'], $archivo_imagen_subido)) {
                 $ruta_imagen = $archivo_foto['name'];
@@ -35,21 +35,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
         }
     }
 
-    // Verificar y procesar el video
-    if ($archivo_video['error'] === UPLOAD_ERR_OK) {
-        $tipo_video = mime_content_type($archivo_video['tmp_name']);
-        if (strpos($tipo_video, 'video/') !== false) { 
-            $carpeta_destino_video = '../MI_PROYECTO/videos/';// RUTA DE VIDEO
-            $archivo_video_subido = $carpeta_destino_video . $archivo_video['name'];
-            if (move_uploaded_file($archivo_video['tmp_name'], $archivo_video_subido)) {
-                $ruta_video = $archivo_video['name'];
-            } else {
-                echo "Error al subir el video.";
-            }
+ // Verificar y procesar el video
+if ($archivo_video['error'] === UPLOAD_ERR_OK) {
+    $tipo_video = mime_content_type($archivo_video['tmp_name']);
+    if (strpos($tipo_video, 'video/') !== false) {
+
+        // Ruta absoluta al directorio videos (está al mismo nivel que upload)
+        $carpeta_destino_video = dirname(__DIR__) . '/videos/';
+        $archivo_video_subido = $carpeta_destino_video . basename($archivo_video['name']);
+
+        // Mover el archivo
+        if (move_uploaded_file($archivo_video['tmp_name'], $archivo_video_subido)) {
+            // Guardamos solo el nombre, no la ruta completa
+            $ruta_video = $archivo_video['name'];
         } else {
-            echo "El archivo seleccionado no es un video válido.";
+            echo "Error al subir el video.";
         }
+
+    } else {
+        echo "El archivo seleccionado no es un video válido.";
     }
+}
+
 
     // Insertar datos en la base de datos
     if (!isset($error)) {

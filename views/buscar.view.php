@@ -1,35 +1,30 @@
+<?php 
+require_once 'admin/config.php'; 
+require_once 'functions.php'; 
 
-<?php require 'header.php'; ?>
-<?php require 'sidebar.php'; ?>
+$conexion = conexion($bd_config);
+if (!$conexion) {
+    header('Location: error.php');
+    exit;
+}
 
-<!-- Sección 4 Contenido -->
-<div class="contenedor4">
-    <?php foreach($resultados as $post): ?>
+if ($_SERVER['REQUEST_METHOD'] == 'GET' && !empty($_GET['busqueda'])) {
+    $busqueda = limpiarDatos($_GET['busqueda']);
 
-        <div class="post">
-            <article>
-            <h2 class="titulo" onclick="location.href='single.php?id=<?php echo $post['id']; ?>'" style="cursor: pointer;">
-    <?php echo $post['titulo']; ?>
-</h2>
-                <p class="fecha"><?php echo $post['usuario']; ?></p>
+    $statement = $conexion->prepare(
+        'SELECT * FROM articulos WHERE titulo LIKE :busqueda OR descripcion LIKE :busqueda'
+    );
+    $statement->execute([
+        ':busqueda' => "%$busqueda%"
+    ]);
+    $resultados = $statement->fetchAll();
 
-                <div class="thumb">
-                    <a href="single.php?id=<?php echo $post['id']; ?>">
-                        <img src="./imagenes/<?php echo $post['categoria']; ?>" alt="<?php echo $post['titulo'] ?>">
-                    </a>
-                </div>
-                <p class="extracto"><?php echo $post['descripcion'] ?></p>
-                <a href="single.php?id=<?php echo $post['id']; ?>" class="continuar">Continuar Leyendo</a>
-            </article>
-        </div>
+    $titulo = empty($resultados) 
+        ? 'No se encontraron artículos con el término: ' . $busqueda 
+        : 'Resultados de la búsqueda: ' . $busqueda;
+} else {
+    header('Location: ' . RUTA . '/index.php');
+    exit;
+}
 
-
-        <?php endforeach; ?>
-    
-
-
-</div>
-
-<?php require 'paginacion.php'; ?>
-
-<?php require 'footer.php'; ?>
+require 'views/buscar.view.php';
